@@ -1,0 +1,30 @@
+注：
+( )中的内容是要根据实际填写的内容
+[ ]中的内容是注释信息，无需填写
+注意空格
+
+github镜像网址：github.swjtu.xyz
+
+创建本地文件夹：mkdir (文件夹名)[创建在用户文件夹中]
+进入本地文件夹：cd (文件夹名)
+在文件夹中创建并写入文件：echo "(内容)">>(文件名)
+查看文件：ls
+
+在当前目录生成.git文件夹：git init[亦可创建目录并生成.git文件夹：git init (目录名)]
+添加文件至git暂存区：git add (文件名[之前创建的文件的文件名])
+把暂存区的修改提交至仓库主分支[此时仅是提交至本地]：git commit -m "(说明信息[说明这次提交的、修改的内容，可在.git文件夹的COMMIT_EDITMSG文件中查看])"
+
+连接本地和团队：git remote add origin (地址)
+查看连接：git remote -v
+取消连接[不用做这一步]：git remote rm origin
+
+提交至团队：git push -u (主机名[一般为origin]) (本地分支名[一般为master]):(远程分支名[随便写一个，会自动创建])
+
+之后在github中更改自己创建的分支中的文件后
+从远程仓库下载新分支与数据：git fetch origin
+将被更新的分支同步到本地：git merge origin/(被更新的分支名)
+git fetch+git merge：git pull
+
+分支操作：
+https://www.cnblogs.com/runnerjack/p/9342362.html
+https://blog.csdn.net/qq_42780289/article/details/98049574
